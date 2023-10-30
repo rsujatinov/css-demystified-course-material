@@ -15,6 +15,7 @@ h1 {
 .subhead {
   font-size: 1.3125rem;
   margin-top: 0;
+  margin-bottom: 2em;
 }
 
 .plans {
@@ -23,42 +24,56 @@ h1 {
 }
 
 .plan {
-  color: #fff;
-  background: linear-gradient(-45deg, #00a1ab, #3741a0);
+  color: var(--color, #fff);
+  background: var(--bg, linear-gradient(-45deg, #00a1ab, #3741a0));
   width: 200px;
   padding: 2em;
   border-radius: 1em;
   margin: 0 0.5em;
 }
 
-.plan__title {
+.plan.light {
+  --bg: linear-gradient(-45deg, #E5E3E8, #FAFAFA);
+  --color: #4E4E4E;
+}
+
+.plan h2 {
   text-transform: uppercase;
   margin: 0 0 1em;
 }
 
-.plan__price {
+.plan.light .price {
+  color: #00a1ab;
+}
+
+.plan .price {
   font-size: 3rem;
   font-weight: 900;
   margin: 0;
 }
 
-.plan__price span {
+.plan .price span {
   display: block;
   font-size: 1.5625rem;
   font-weight: 300;
 }
 
-.plan__description {
+.plan .description {
   margin: 2em 0;
   line-height: 1.5;
 }
 
-.plan__button {
-  background: white;
-  color: #4e4e4e;
+.plan .button {
+  background: var(--bg, white);
+  color: var(--color, #4e4e4e);
   text-decoration: none;
   padding: 0.5em 0.75em;
   border-radius: 0.25em;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+.plan.light .button {
+  --bg: #4e4e4e;
+  --color: white;
 }
