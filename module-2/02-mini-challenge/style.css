@@ -40,6 +40,10 @@ h1 {
   background-size: cover;
   padding-top: 10rem;
   padding-bottom: 10rem;
+
+  & a {
+    display: inline-block;
+  }
 }
 
 .hero__content {
